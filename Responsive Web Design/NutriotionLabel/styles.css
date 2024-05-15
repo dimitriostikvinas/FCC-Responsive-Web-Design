@@ -1,0 +1,118 @@
+/* Applies box-sizing to all elements, including padding and borders in the element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Sets the base font size for the HTML document */
+html {
+  font-size: 16px;
+}
+
+/* Sets the default font family for the body, using Google Fonts' Open Sans */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Styling for the label container with a border, fixed width, and centered alignment */
+.label {
+  border: 2px solid black;
+  width: 270px;
+  margin: 20px auto;
+  padding: 0 7px;
+}
+
+/* Center-aligns the main title in the header and adjusts its spacing and letter-spacing */
+header h1 {
+  text-align: center;
+  margin: -4px 0;
+  letter-spacing: 0.15px;
+}
+
+/* Styles for paragraphs to have no default margin and to layout their contents spaced between */
+p {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Creates a thin divider with a specified color and margin for visual separation */
+.divider {
+  border-bottom: 1px solid #888989;
+  margin: 2px 0;
+}
+
+/* Applies bold font weight to elements with class 'bold' */
+.bold {
+  font-weight: 800;
+}
+
+/* Specific height settings for large and medium dividers, with background color for visibility */
+.large, .medium {
+  background-color: black;
+  border: 0;
+}
+.large {
+  height: 10px;
+}
+.medium {
+  height: 5px;
+}
+
+/* Reduces font size for elements with class 'small-text' */
+.small-text {
+  font-size: 0.85rem;
+}
+
+/* Flexbox styling for the calories-info section to align items and distribute space */
+.calories-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* Styling for headings within the calories-info to have no margin */
+.calories-info h2 {
+  margin: 0;
+}
+
+/* Styling for paragraphs in the left-container to adjust font size, weight, and margin */
+.left-container p {
+  margin: -5px -2px;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+/* Styling for spans in the calories-info to adjust font size, weight, and margin */
+.calories-info span {
+  margin: -7px -2px;
+  font-size: 2.4em;
+  font-weight: 700;
+}
+
+/* Flex-end alignment for elements with class 'right' */
+.right {
+  justify-content: flex-end;
+}
+
+/* Adds an indentation to elements with class 'indent' */
+.indent {
+  margin-left: 1em;
+}
+
+/* Adds double the indentation for elements with class 'double-indent' */
+.double-indent {
+  margin-left: 2em;
+}
+
+/* Applies a bottom border to paragraphs within daily-value except those with class 'no-divider' */
+.daily-value p:not(.no-divider) {
+  border-bottom: 1px solid #888989;
+}
+
+/* Styles for the note at the bottom, adjusting font size, margins, padding, and text indentation */
+.note {
+  font-size: 0.6rem;
+  margin: 5px 0;
+  padding: 0 8px;
+  text-indent: -8px;
+}

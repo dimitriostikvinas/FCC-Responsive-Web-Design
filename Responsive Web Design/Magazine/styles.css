@@ -1,0 +1,205 @@
+/* Resets padding and margin to 0 for all elements, before and after pseudo-elements, ensuring consistency across all browsers. */
+*, ::before, ::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height. */
+}
+
+/* Sets the base font-size for the document to 62.5%, making 1rem equal to 10px for easier calculations. */
+html {
+  font-size: 62.5%;
+}
+
+/* Applies a serif font family and base text color to the body of the document, setting a consistent baseline for styling. */
+body {
+  font-family: 'Baskervville', serif;
+  color: linen;
+  background-color: rgb(20, 30, 40); /* Dark background color for contrast with the linen text. */
+}
+
+/* Specifies the font family for main headings, using a sans-serif type for clear visibility and impact. */
+h1 {
+  font-family: 'Anton', sans-serif;
+}
+
+/* Assigns a specific sans-serif font family to all heading elements from h2 to h6, maintaining visual hierarchy. */
+h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Removes underline from links for a cleaner look and sets their color to match the body text. */
+a {
+  text-decoration: none;
+  color: linen;
+}
+
+/* Establishes a grid layout for the main element, controlling the overall structure and spacing of the page content. */
+main {
+  display: grid;
+  grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
+  row-gap: 3rem; /* Spacing between rows in the grid. */
+}
+
+/* Ensures images are fully responsive, filling their containers without distorting their aspect ratios. */
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Styles horizontal rules with a light gray color and specific margin for visual separation of content. */
+hr {
+  margin: 1.5rem 0;
+  border: 1px solid rgba(120, 120, 120, 0.6);
+}
+
+/* Defines the layout for the heading section, placing it centrally within the grid and specifying internal grid columns. */
+.heading {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1.5rem; /* Vertical spacing between items in the grid. */
+}
+
+/* Styles the text section with specific font size and letter spacing for readability and visual appeal. */
+.text {
+  grid-column: 2 / 3;
+  font-size: 1.8rem;
+  letter-spacing: 0.6px;
+  column-width: 25rem; /* Preferred width for columns of text, enhancing readability. */
+  text-align: justify; /* Justifies text to align both left and right edges. */
+}
+
+/* Sets the relative positioning for the hero section, allowing absolute positioning of child elements if needed. */
+.hero {
+  grid-column: 1 / -1; /* Spans across all columns in the grid. */
+  position: relative;
+}
+
+/* Centrally aligns the hero title, sets its color, and adjusts font size for dramatic effect. */
+.hero-title {
+  text-align: center;
+  color: orangered;
+  font-size: 8rem;
+}
+
+/* Styles the hero subtitle with a smaller font size than the title but in the same color for visual continuity. */
+.hero-subtitle {
+  font-size: 2.4rem;
+  color: orangered;
+  text-align: center;
+}
+
+/* Sets the font style and size for the author section to differentiate it from other text content. */
+.author {
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+}
+
+/* Changes the background color of author name links on hover for interactive visual feedback. */
+.author-name a:hover {
+  background-color: #306203;
+}
+
+/* Styles the publication date with reduced opacity for a subtle appearance. */
+.publish-date {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Configures the display of social icons using a grid layout, setting equal size and spacing for each icon. */
+.social-icons {
+  display: grid;
+  font-size: 3rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items: center; /* Vertically centers icons in their grid cells. */
+}
+
+/* Styles the drop cap in the first paragraph, setting its size, color, and margins for emphasis. */
+.first-paragraph::first-letter {
+  font-size: 6rem;
+  color: orangered;
+  float: left;
+  margin-right: 1rem;
+}
+
+/* Applies a specific color, font size, and alignment to quotes, and adds quotation marks before and after via pseudo-elements. */
+.quote {
+  color: #00beef;
+  font-size: 2.4rem;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+.quote::before {
+  content: '" ';
+}
+.quote::after {
+  content: ' "';
+}
+
+/* Adjusts the layout of sections containing text and images, providing appropriate spacing and alignment. */
+.text-with-images {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 3rem; /* Space between text and images. */
+  margin-bottom: 3rem; /* Additional spacing at the bottom of the section. */
+}
+
+/* Styles the list within the historical section, removing bullet points for a cleaner look and spacing items for readability. */
+.lists {
+  list-style-type: none;
+  margin-top: 2rem;
+}
+.lists li {
+  margin-bottom: 1.5rem;
+}
+
+/* Sets color for titles within lists to maintain a uniform thematic appearance with other highlighted elements. */
+.list-title, .list-subtitle {
+  color: #00beef;
+}
+
+/* Configures the layout for image wrappers, organizing images and related content into a cohesive grid structure. */
+.image-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(3, min-content);
+  gap: 2rem; /* Spacing between grid items. */
+  place-items: center; /* Centers items within their grid cells. */
+}
+
+/* Ensures that specific images span all available columns within the grid, particularly useful for larger featured images. */
+.image-1, .image-3 {
+  grid-column: 1 / -1;
+}
+
+/* Media queries adjust styles for various device widths, enhancing responsiveness and ensuring the layout remains visually appealing and functional on smaller screens. */
+@media only screen and (max-width: 720px) {
+  .image-wrapper {
+    grid-template-columns: 1fr; /* Stacks images vertically on smaller screens. */
+  }
+}
+@media only screen and (max-width: 600px) {
+  .text-with-images {
+    grid-template-columns: 1fr; /* Adjusts text-with-images sections to a single column layout on very small screens. */
+  }
+}
+@media only screen and (max-width: 550px) {
+  .hero-title {
+    font-size: 6rem; /* Reduces the size of the hero title for smaller devices to prevent overflow. */
+  }
+  .hero-subtitle, .author, .quote, .list-title {
+    font-size: 1.8rem; /* Scales down font sizes for better readability on smaller screens. */
+  }
+  .social-icons {
+    font-size: 2rem; /* Adjusts the size of social icons to fit smaller screen layouts. */
+  }
+  .text {
+    font-size: 1.6rem; /* Decreases the font size of general text to improve space usage and readability on small devices. */
+  }
+}
+@media only screen and (max-width: 420px) {
+  .hero-title {
+    font-size: 4.5rem; /* Further reduces the hero title font size for extremely small screens to ensure fitting within the viewport. */
+  }
+}

@@ -1,0 +1,103 @@
+/* Global styles */
+body {
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg); /* Sets the background image for the body */
+  font-family: sans-serif; /* The default font family */
+  padding: 20px; /* Space around the content */
+}
+
+h1, h2 {
+  font-family: Impact, serif; /* Font family for h1 and h2 elements */
+  text-align: center; /* Centers the text */
+}
+
+p {
+  text-align: center;
+}
+
+/* Styles for main heading */
+h1 {
+  font-size: 40px; /* Font size for h1 */
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* Styles for subheadings */
+h2 {
+  font-size: 30px; /* Font size for h2 */
+}
+
+/* Styling for the .established class */
+.established {
+  font-style: italic; /* Makes text italic */
+}
+
+/* Menu container styling */
+.menu {
+  width: 80%; /* Menu width relative to its parent */
+  background-color: burlywood; /* Background color of the menu */
+  margin-left: auto;
+  margin-right: auto; /* Centers the menu horizontally */
+  padding: 20px; /* Padding inside the menu */
+  max-width: 500px; /* Maximum width of the menu */
+}
+
+/* Image styling */
+img {
+  display: block; /* Images are displayed as block elements */
+  margin-left: auto;
+  margin-right: auto; /* Centers images horizontally */
+  margin-top: -25px; /* Adjusts image position */
+}
+
+/* Styling for horizontal rules */
+hr {
+  height: 2px;
+  background-color: brown;
+  border-color: brown; /* Sets the color and height of horizontal rules */
+}
+
+.bottom-line {
+  margin-top: 25px; /* Additional styling for a specific horizontal rule */
+}
+
+/* Styles for items within the menu */
+.item p {
+  display: inline-block; /* Allows paragraphs to be displayed side-by-side */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px; /* Font size for item paragraphs */
+}
+
+/* Class-specific stylings */
+.flavor, .dessert {
+  text-align: left; /* Aligns text to the left */
+  width: 75%; /* Width allocation for flavor/dessert names */
+}
+
+.price {
+  text-align: right; /* Aligns price to the right */
+  width: 25%; /* Width allocation for price */
+}
+
+/* FOOTER STYLING */
+
+footer {
+  font-size: 14px; /* Font size for the footer */
+}
+
+.address {
+  margin-bottom: 5px; /* Bottom margin for the address */
+}
+
+/* Link styling */
+a {
+  color: black; /* Default link color */
+}
+
+a:visited {
+  color: black; /* Color for visited links */
+}
+
+a:hover, a:active {
+  color: brown; /* Color for links on hover and when active */
+}

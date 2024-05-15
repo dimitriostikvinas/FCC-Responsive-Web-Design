@@ -1,0 +1,80 @@
+body {
+  width: 100%; /* Sets the width of the body to fill the entire viewport */
+  height: 100vh; /* Sets the height of the body to 100% of the viewport height */
+  margin: 0; /* Removes the default margin */
+  background-color: #1b1b32; /* Sets the background color of the body */
+  color: #f5f6f7; /* Sets the color of the text */
+  font-family: Tahoma; /* Sets the font of the text */
+  font-size: 16px; /* Sets the base size of the text */
+}
+
+h1, p {
+  margin: 1em auto; /* Sets top and bottom margins to 1em, and auto centers them horizontally */
+  text-align: center; /* Centers the text horizontally */
+}
+
+form {
+  width: 60vw; /* Sets the width of the form to 60% of the viewport width */
+  max-width: 500px; /* Sets the maximum width of the form */
+  min-width: 300px; /* Sets the minimum width of the form */
+  margin: 0 auto; /* Centers the form horizontally */
+  padding-bottom: 2em; /* Adds padding below the form */
+}
+
+fieldset {
+  border: none; /* Removes the default border around the fieldset */
+  padding: 2rem 0; /* Adds padding above and below the content inside the fieldset */
+  border-bottom: 3px solid #3b3b4f; /* Adds a solid border below the fieldset */
+}
+
+fieldset:last-of-type {
+  border-bottom: none; /* Removes the bottom border from the last fieldset */
+}
+
+label {
+  display: block; /* Makes the label display as a block, allowing it to take up the full width */
+  margin: 0.5rem 0; /* Adds margin above and below the label */
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0; /* Adds margin above the elements */
+  width: 100%; /* Sets the width of the elements to fill their container */
+  min-height: 2em; /* Sets a minimum height for the elements */
+}
+
+input, textarea {
+  background-color: #0a0a23; /* Sets the background color of input and textarea */
+  border: 1px solid #0a0a23; /* Sets the border of input and textarea */
+  color: #ffffff; /* Sets the text color inside input and textarea */
+}
+
+.inline {
+  width: unset; /* Resets the width for inline elements */
+  margin: 0 0.5em 0 0; /* Adds right margin to inline elements */
+  vertical-align: middle; /* Aligns inline elements vertically to the middle */
+}
+
+input[type="submit"] {
+  display: block; /* Makes the submit button display as a block */
+  width: 60%; /* Sets the width of the submit button to 60% of its container */
+  margin: 1em auto; /* Centers the button horizontally and adds margin above and below */
+  height: 2em; /* Sets the height of the button */
+  font-size: 1.1rem; /* Sets the size of the text on the button */
+  background-color: #3b3b4f; /* Sets the background color of the button */
+  border-color: white; /* Sets the border color of the button */
+  min-width: 300px; /* Sets a minimum width for the button */
+}
+
+input[type="file"] {
+  padding: 1px 2px; /* Adds padding inside the file input */
+}
+
+.inline{
+  display: inline;  /* Makes elements with class "inline" display inline, so they flow within text or other inline elements */
+}
+
+a {
+  color: #dfdfe2; /* Sets the color of links */
+}

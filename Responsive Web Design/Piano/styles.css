@@ -1,0 +1,75 @@
+html {
+  box-sizing: border-box; /* Changes the default CSS box model to include padding and border in the element's width and height. */
+}
+
+*, *::before, *::after {
+  box-sizing: inherit; /* Ensures all elements inherit the box-sizing from the html element. */
+}
+
+#piano {
+  background-color: #00471b; /* Sets the background color of the piano container. */
+  width: 992px; /* Fixed width for the piano. */
+  height: 290px; /* Fixed height for the piano. */
+  margin: 80px auto; /* Centers the piano horizontally and adds margin at the top and bottom. */
+  padding: 90px 20px 0 20px; /* Padding inside the piano container. */
+  position: relative; /* Establishes a relative positioning context for absolutely positioned child elements. */
+  border-radius: 10px; /* Rounds the corners of the piano container. */
+}
+
+.keys {
+  background-color: #040404; /* Sets the background color of the keys container, representing the area behind the keys. */
+  width: 949px; /* Width of the keys container. */
+  height: 180px; /* Height of the keys container. */
+  padding-left: 2px; /* Small padding to ensure keys are not flush against the container edge. */
+  overflow: hidden; /* Prevents any child elements from overflowing the keys container. */
+}
+
+.key {
+  background-color: #ffffff; /* Sets the key's background color to white. */
+  position: relative; /* Used for positioning of nested elements like black keys. */
+  width: 41px; /* Width of each key. */
+  height: 175px; /* Height of each key. */
+  margin: 2px; /* Space between keys. */
+  float: left; /* Aligns keys in a horizontal row. */
+  border-radius: 0 0 3px 3px; /* Rounds the bottom corners of the keys. */
+}
+
+.key.black--key::after {
+  background-color: #1d1e22; /* Sets the background color of the black key. */
+  content: ""; /* Required for the pseudo-element to display. */
+  position: absolute; /* Positions the pseudo-element relative to its nearest positioned ancestor. */
+  left: -18px; /* Positions the black key slightly offset from the left edge of its parent key. */
+  width: 32px; /* Width of the black key. */
+  height: 100px; /* Height of the black key. */
+  border-radius: 0 0 3px 3px; /* Rounds the bottom corners of the black key. */
+}
+
+.logo {
+  width: 200px; /* Sets the width of the logo. */
+  position:absolute; /* Positions the logo relative to its nearest positioned ancestor. */
+  top: 23px; /* Positions the logo 23 pixels from the top of its container. */
+}
+
+@media (max-width: 768px) {
+  #piano {
+    width: 358px; /* Adjusts the piano's width for smaller screens. */
+  }
+
+  .keys {
+    width: 318px; /* Adjusts the keys container's width for smaller screens. */
+  }
+
+  .logo {
+    width: 150px; /* Adjusts the logo's width for smaller screens. */
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 769px) {
+  #piano {
+    width: 675px; /* Adjusts the piano's width for medium screens. */
+  }
+
+  .keys {
+    width: 633px; /* Adjusts the keys container's width for medium screens. */
+  }
+}

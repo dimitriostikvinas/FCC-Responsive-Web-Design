@@ -1,0 +1,109 @@
+<!DOCTYPE html> <!-- Document type declaration for HTML5 -->
+<html lang="en"> <!-- Root element of the HTML document with English as the language -->
+
+<head>
+  <meta charset="UTF-8" /> <!-- Character encoding set to UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Viewport settings for responsive design -->
+  <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" /> <!-- Description of the webpage content for SEO -->
+  <title>Accessibility Quiz</title> <!-- Title of the webpage -->
+  <link rel="stylesheet" href="styles.css" /> <!-- Link to external CSS stylesheet -->
+</head>
+
+<body>
+  <header>
+    <img id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"> <!-- Logo image -->
+    <h1>HTML/CSS Quiz</h1> <!-- Main heading of the page -->
+    <nav>
+      <ul>
+        <!-- Navigation links with access keys for quick access -->
+        <li><a href="#student-info" accesskey="i" title="Accesskey: Alt + i (Windows/Linux) or Option + i (Mac)">INFO</a></li>
+        <li><a href="#html-questions" accesskey="h" title="Accesskey: Alt + h (Windows/Linux) or Option + h (Mac)">HTML</a></li>
+        <li><a href="#css-questions" accesskey="c" title="Accesskey: Alt + c (Windows/Linux) or Option + c (Mac)">CSS</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+      <!-- Form to collect user responses with specified method and action URL -->
+      <section role="region" aria-labelledby="student-info">
+        <!-- Section for student information, accessible with ARIA attributes -->
+        <h2 id="student-info">Student Info</h2> <!-- Section heading -->
+        <div class="info">
+          <label for="student-name">Name:</label> <!-- Label for name input -->
+          <input type="text" name="student-name" id="student-name" /> <!-- Text input for name -->
+        </div>
+        <div class="info">
+          <label for="student-email">Email:</label> <!-- Label for email input -->
+          <input type="email" name="student-email" id="student-email" /> <!-- Email input -->
+        </div>
+        <div class="info">
+          <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label> <!-- Label for date of birth input with screen reader only text -->
+          <input type="date" name="birth-date" id="birth-date" /> <!-- Date input for DOB -->
+        </div>
+      </section>
+      <section role="region" aria-labelledby="html-questions">
+        <!-- Section for HTML questions, accessible with ARIA attributes -->
+        <h2 id="html-questions">HTML</h2> <!-- Section heading for HTML questions -->
+        <div class="question-block">
+          <p>1</p> <!-- Question number -->
+          <fieldset class="question" name="html-question-one">
+            <!-- Group of related form elements for a single question -->
+            <legend>
+              The legend element represents a caption for the content of its parent fieldset element
+            </legend> <!-- Caption for the fieldset describing the question -->
+            <ul class="answers-list">
+              <!-- List of answers -->
+              <li>
+                <label for="q1-a1">
+                  <input type="radio" id="q1-a1" name="q1" value="true" /> True
+                </label>
+              </li>
+              <li>
+                <label for="q1-a2">
+                  <input type="radio" id="q1-a2" name="q1" value="false" /> False
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <!-- Additional questions would be similar to the above structure -->
+      </section>
+      <section role="region" aria-labelledby="css-questions">
+        <!-- Section for CSS questions, similar structure as previous sections -->
+        <h2 id="css-questions">CSS</h2> <!-- Section heading for CSS questions -->
+        <div class="formrow">
+          <!-- Container for form elements -->
+          <div class="question-block">
+            <label for="selector">Can the CSS margin property accept negative values?</label> <!-- Question text -->
+          </div>
+          <div class="answer">
+            <select name="selector" id="selector" required>
+              <!-- Dropdown for selecting an answer -->
+              <option value="">Select an option</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="question-block">
+            <label for="css-textarea">Do you have any questions:</label> <!-- Label for textarea -->
+          </div>
+          <div class="answer">
+            <textarea id="css-textarea" name="css-questions" rows="5" cols="24" placeholder="Who is flexbox..."></textarea>
+            <!-- Textarea for additional questions -->
+          </div>
+        </div>
+      </section>
+      <button type="submit">Send</button> <!-- Submission button for the form -->
+    </form>
+  </main>
+  <footer>
+    <address>
+      <!-- Contact information -->
+      <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+      San Francisco<br />
+      California<br />
+      USA
+    </address>
+  </footer>
+</body>
+</html>

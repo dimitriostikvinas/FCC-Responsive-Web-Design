@@ -1,0 +1,193 @@
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth; /* Applies smooth scrolling when the user has not expressed a preference for reduced motion */
+  }
+}
+
+body {
+  background: #f5f6f7; /* Light grey background color for the body */
+  color: #1b1b32; /* Dark text color for readability */
+  font-family: Helvetica; /* Sets Helvetica as the primary typeface */
+  margin: 0; /* Removes default margin */
+}
+
+header {
+  width: 100%; /* Full width header */
+  height: 50px; /* Fixed height for the header */
+  background-color: #1b1b32; /* Dark background for header */
+  display: flex; /* Uses flexbox for layout */
+  justify-content: space-between; /* Distributes space between children equally */
+  align-items: center; /* Vertically centers children */
+  position: fixed; /* Keeps the header at the top of the viewport */
+  top: 0; /* Aligns the header at the top of the page */
+}
+
+#logo {
+  width: max(100px, 18vw); /* Responsive width for the logo */
+  background-color: #0a0a23; /* Dark blue background color for the logo */
+  aspect-ratio: 35 / 4; /* Sets a fixed aspect ratio for the logo */
+  padding: 0.4rem; /* Padding around the logo */
+}
+
+h1 {
+  color: #f1be32; /* Yellow color for the main heading */
+  font-size: min(5vw, 1.2em); /* Responsive font size for the main heading */
+  text-align: center; /* Centers the heading text */
+}
+
+nav {
+  width: 50%; /* Half the width of its parent */
+  max-width: 300px; /* Maximum width of the nav */
+  height: 50px; /* Fixed height for the nav */
+}
+
+nav > ul {
+  display: flex; /* Displays the list items inline */
+  justify-content: space-evenly; /* Distributes space between items evenly */
+  flex-wrap: wrap; /* Allows items to wrap in small spaces */
+  align-items: center; /* Vertically aligns items in the middle */
+  padding-inline-start: 0; /* Removes padding from the start of the list */
+  margin-block: 0; /* Removes vertical margins from the list */
+  height: 100%; /* Full height of its container */
+}
+
+nav > ul > li {
+  color: #dfdfe2; /* Light grey color for list items */
+  margin: 0 0.2rem; /* Margins around each list item */
+  padding: 0.2rem; /* Padding around each list item */
+  display: block; /* Displays list items as block elements */
+}
+
+nav > ul > li:hover {
+  background-color: #dfdfe2; /* Changes background on hover */
+  color: #1b1b32; /* Changes text color on hover */
+  cursor: pointer; /* Changes the cursor to a pointer */
+}
+
+li > a {
+  color: inherit; /* Inherits color from parent list item */
+  text-decoration: none; /* Removes underline from links */
+}
+
+main {
+  padding-top: 50px; /* Adds padding at the top to avoid overlap with the fixed header */
+}
+
+section {
+  width: 80%; /* Sets width of each section to 80% of its container */
+  margin: 0 auto 10px auto; /* Centers sections horizontally and adds spacing at the bottom */
+  max-width: 600px; /* Maximum width of the sections */
+}
+
+h1, h2 {
+  font-family: Verdana, Tahoma; /* Sets the font family for all heading elements */
+}
+
+h2 {
+  border-bottom: 4px solid #dfdfe2; /* Adds a bottom border to h2 elements */
+  margin-top: 0px; /* Removes top margin from h2 elements */
+  padding-top: 60px; /* Adds top padding to space out from content above */
+}
+
+.info {
+  padding: 10px 0 0 5px; /* Padding for the info class to align content properly */
+}
+
+.formrow {
+  margin-top: 30px; /* Adds a top margin to separate rows of the form */
+  padding: 0px 15px; /* Adds padding on the sides for better alignment */
+}
+
+input {
+  font-size: 16px; /* Sets font size for input elements */
+}
+
+.info label, .info input {
+  display: inline-block; /* Displays label and input side by side */
+}
+
+.info input {
+  width: 50%; /* Sets the width of input elements to 50% */
+  text-align: left; /* Aligns text to the left */
+}
+
+.info label {
+  width: 10%; /* Sets the width of labels to 10% */
+  min-width: 55px; /* Ensures labels are not too narrow */
+  text-align: right; /* Right-aligns text in labels */
+}
+
+.question-block {
+  text-align: left; /* Left-aligns content in the question block */
+  display: block; /* Displays as a block element */
+  width: 100%; /* Full width of its container */
+  margin-top: 20px; /* Adds a top margin for spacing */
+  padding-top: 5px; /* Adds top padding for visual separation */
+}
+
+p {
+  margin-top: 5px; /* Top margin for paragraphs */
+  padding-left: 15px; /* Left padding for paragraphs */
+  font-size: 20px; /* Font size for paragraphs */
+}
+
+p::before {
+  content: "Question #"; /* Adds content before each paragraph */
+}
+
+.question {
+  border: none; /* Removes borders from questions */
+  padding-bottom: 0; /* Removes bottom padding */
+}
+
+.answers-list {
+  list-style: none; /* Removes list styling */
+  padding: 0; /* Removes padding */
+}
+
+button {
+  display: block; /* Displays button as a block element */
+  margin: 40px auto; /* Centers button horizontally and adds vertical spacing */
+  width: 40%; /* Sets the width of the button to 40% of its container */
+  padding: 15px; /* Adds padding for better clickability */
+  font-size: 23px; /* Large font size for better readability */
+  background: #d0d0d5; /* Light grey background for the button */
+  border: 3px solid #3b3b4f; /* Thick border with a dark color for contrast */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+}
+
+button:hover {
+  background-color: #45a049; /* Changes background color on hover for visual feedback */
+}
+
+button:active {
+  transform: scale(0.98); /* Slightly scales down the button when clicked */
+  background-color: #3e8e41; /* Changes background color when the button is active */
+}
+
+footer {
+  background-color: #2a2a40; /* Dark background color for the footer */
+  display: flex; /* Uses flexbox to center content horizontally */
+  justify-content: center; /* Centers content within the footer */
+}
+
+footer, footer a {
+  color: #dfdfe2; /* Sets text color to light grey for contrast */
+}
+
+address {
+  text-align: center; /* Centers text within the address tag */
+  padding: 0.3em; /* Adds padding around the address content */
+}
+
+.sr-only {
+  position: absolute; /* Positions the element absolutely relative to its nearest positioned ancestor */
+  width: 1px; /* Effectively hides the element visually */
+  height: 1px; /* Effectively hides the element visually */
+  padding: 0; /* Removes padding */
+  margin: -1px; /* Removes margins */
+  overflow: hidden; /* Hides any content that overflows */
+  clip: rect(0, 0, 0, 0); /* Clips the content to a 1px box, effectively hiding it */
+  white-space: nowrap; /* Prevents text wrapping */
+  border: 0; /* Removes borders */
+}

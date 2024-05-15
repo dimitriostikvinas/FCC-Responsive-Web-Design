@@ -1,0 +1,58 @@
+<!DOCTYPE html> <!-- Declares the document type to be HTML5 -->
+<html lang="en"> <!-- The root element of the HTML document, specifies the language as English -->
+  <head> <!-- Contains meta information about the HTML document -->
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
+    <title>Registration Form</title> <!-- The title of the document displayed in the browser's title bar or tab -->
+    <link rel="stylesheet" href="styles.css" /> <!-- Links the HTML document to an external CSS file for styling -->
+  </head>
+  <body> <!-- Contains the visible content of the HTML document -->
+    <h1>Registration Form</h1> <!-- Main heading of the document -->
+    <p>Please fill out this form with the required information</p> <!-- Paragraph providing instructions or information -->
+    <form method="post" action='https://register-demo.freecodecamp.org'> <!-- Creates a form; method specifies how to send form-data, action specifies where to send form-data -->
+      <fieldset> <!-- Groups related elements in a form and draws a box around them -->
+        <!-- Each label/input pair is a form field for user input -->
+        <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required /></label> <!-- Label for input; 'for' attribute links label to input element by id -->
+        <!-- 'required' attribute makes sure the field must be filled out before submitting the form -->
+        <label for="last-name">Enter Your Last Name: <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
+        <!-- 'type' attribute specifies the type of data expected (text, email, password) -->
+        <label for="new-password">Create a New Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+        <!-- 'pattern' attribute specifies a regular expression the input field's value is checked against -->
+      </fieldset>
+      <fieldset>
+        <legend>Account type (required)</legend> <!-- Defines a caption for the 'fieldset' element -->
+        <!-- Radio buttons for selecting account type; 'name' attribute groups them together so only one can be selected -->
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Personal</label>
+        <!-- 'checked' attribute specifies the default selected option -->
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Business</label>
+      </fieldset>
+      <fieldset>
+        <!-- File input allows user to upload a file -->
+        <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" name="file" /></label>
+        <!-- Number input restricts user to enter a number; 'min' and 'max' specify the range -->
+        <label for="age">Input your age (years): <input id="age" type="number" name="age" min="13" max="120" /></label>
+        <!-- Dropdown menu created with 'select' and 'option' elements -->
+        <label for="referrer">How did you hear about us?
+          <select id="referrer" name="referrer">
+            <option value="">(select one)</option> <!-- Default option prompting user to make a selection -->
+            <!-- Each 'option' element is a choice in the dropdown -->
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp YouTube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <!-- Textarea element for multi-line text input; 'placeholder' provides a hint to the user -->
+        <label for="bio">Provide a bio:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+        </label>
+      </fieldset>
+      <!-- Checkbox input for accepting terms and conditions; 'required' ensures it must be checked to submit -->
+      <label for="terms-and-conditions">
+        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+      </label>
+      <!-- Submit button for the form -->
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

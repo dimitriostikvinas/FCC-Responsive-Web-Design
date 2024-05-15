@@ -1,0 +1,60 @@
+<!DOCTYPE html> <!-- Defines the document type and version of HTML -->
+<html lang="en"> <!-- The root element of an HTML document, with a language attribute set to English -->
+  <head> <!-- Contains meta-information about the document -->
+    <meta charset="utf-8" /> <!-- Specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures proper rendering and touch zooming for mobile devices -->
+    <title>Cafe Menu</title> <!-- The title of the document, shown in a browser's title bar or tab -->
+    <link href="styles.css" rel="stylesheet"/> <!-- Links to an external CSS file for styling -->
+  </head>
+  <body> <!-- Contains the content of an HTML document -->
+    <div class="menu"> <!-- A container for other elements, used here for styling purposes -->
+      <main> <!-- Represents the main content of the body -->
+        <h1>CAMPER CAFE</h1> <!-- Main heading -->
+        <p class="established">Est. 2020</p> <!-- Paragraph, with a class for specific styling -->
+        <hr> <!-- Thematic break or horizontal rule -->
+        <section> <!-- Defines a section in a document -->
+          <h2>Coffee</h2> <!-- Subheading -->
+          <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg" alt="coffee icon"/> <!-- Embeds an image with an alternative text -->
+          <article class="item"> <!-- Specifies independent, self-contained content -->
+            <p class="flavor">French Vanilla</p><p class="price">3.00</p> <!-- Paragraphs, with classes for specific styling -->
+          </article>
+          <article class="item">
+            <p class="flavor">Caramel Macchiato</p><p class="price">3.75</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Hazelnut</p><p class="price">4.00</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Mocha</p><p class="price">4.50</p>
+          </article>
+        </section>
+        <section> <!-- Another section for desserts -->
+          <h2>Desserts</h2>
+          <img src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg" alt="pie icon"/>
+          <article class="item">
+            <p class="dessert">Donut</p><p class="price">1.50</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cheesecake</p><p class="price">3.00</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
+          </article>
+        </section>
+      </main>
+      <hr class="bottom-line"> <!-- Thematic break with a class for specific styling -->
+      <footer> <!-- Contains footer content -->
+        <p>
+          <a href="https://www.freecodecamp.org" target="_blank">Visit our website</a> <!-- Hyperlink with target attribute to open link in a new tab -->
+        </p>
+        <p class="address">123 Free Code Camp Drive</p> <!-- Paragraph, with a class for specific styling -->
+      </footer>
+    </div>
+  </body>
+</html>

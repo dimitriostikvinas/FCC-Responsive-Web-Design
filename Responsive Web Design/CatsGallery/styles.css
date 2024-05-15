@@ -1,0 +1,50 @@
+/* Applies box-sizing to all elements, making border and padding included in the total width and height */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Styles for the body element, setting margins to 0, using a sans-serif font, and setting a light background color */
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f5f6f7;
+  }
+  
+  /* Styles for the header, including centering text, uppercase letters, padding, background color, text color, and bottom border */
+  .header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+  }
+  
+  /* Flexbox layout for the gallery, allowing items to wrap and center align, with defined gaps and max width for the container */
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+  
+  /* Style for each image in the gallery, setting the width, max-width, height, fitting strategy, and border radius */
+  .gallery img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* A pseudo-element to ensure proper alignment of gallery items by adding an invisible element with the same width as the images */
+  .gallery::after {
+    content: "";
+    width: 350px;
+  }
+  

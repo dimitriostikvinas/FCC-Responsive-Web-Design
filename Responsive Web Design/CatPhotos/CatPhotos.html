@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- The DOCTYPE declaration defines the document type and version of HTML -->
+<html lang="en">
+  <head>
+    <!-- The head element contains meta information about the document -->
+    <meta charset="utf-8">
+    <!-- Meta charset specifies the character encoding for the HTML document -->
+    <title>CatPhotoApp</title>
+    <!-- Title defines the title of the document shown in browser's title bar or tab -->
+  </head>
+  <body>
+    <!-- Body element contains the content of an HTML document -->
+    <main>
+      <!-- Main represents the dominant content of the body of a document -->
+      <h1>CatPhotoApp</h1>
+      <!-- h1 represents a main heading in a document -->
+      
+      <section>
+        <!-- Section defines a section in a document -->
+        <h2>Cat Photos</h2>
+        <!-- h2 represents a subsection heading -->
+        <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+        <!-- p defines a paragraph; a defines an anchor/hyperlink -->
+        <!-- target="_blank" opens the linked document in a new tab or window -->
+        <a href="https://freecatphotoapp.com">
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
+        </a>
+        <!-- img represents an image; src attribute specifies the path to the image -->
+        <!-- alt provides alternative information for an image if a user cannot view it -->
+      </section>
+      
+      <section>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul>
+          <!-- ul defines an unordered list -->
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <!-- li defines a list item -->
+        <figure>
+          <!-- figure specifies self-contained content, like illustrations, diagrams, photos -->
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
+          <!-- figcaption defines a caption for a figure element -->
+          <!-- em element is used to emphasize text -->
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <ol>
+          <!-- ol defines an ordered list -->
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+          <!-- strong element is used to indicate strong importance -->
+        </figure>
+      </section>
+      
+      <section>
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <!-- form element represents a document section containing interactive controls -->
+          <!-- action attribute specifies where to send the form-data when a form is submitted -->
+          <fieldset>
+            <!-- fieldset is used to group related elements in a form -->
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <!-- legend defines a caption for a fieldset element -->
+            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+            <!-- input defines an input control; type="radio" defines a radio button -->
+            <!-- The checked attribute is a Boolean attribute indicating the initial state -->
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+            <!-- type="checkbox" defines a checkbox -->
+            <!-- The for attribute of <label> binds it to a specific form element (id) -->
+          </fieldset>
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+          <!-- type="text" defines a one-line text input field -->
+          <!-- The required attribute specifies that an input field must be filled out before submitting the form -->
+          <button type="submit">Submit</button>
+          <!-- button represents a clickable button -->
+        </form>
+      </section>
+    </main>
+    <footer>
+      <!-- footer defines a footer for a document or section -->
+      <p>
+        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+span[class~="sr-only"] { /* Selector targets 'span' elements with a class containing "sr-only". */
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  width: 1px !important;
+  position: absolute !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
+html { /* Ensures that padding and border are included in the element's total width and height. */
+  box-sizing: border-box;
+}
+
+body { /* Sets the font style for the body content. */
+  font-family: sans-serif;
+  color: #0a0a23;
+}
+
+h1 { /* Styles the 'h1' header. */
+  max-width: 37.25rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+
+h1 .flex { /* Applies flexbox layout to elements with class 'flex'. */
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}
+
+h1 .flex span:first-of-type { /* Styles the first span within .flex differently. */
+  font-size: 0.7em;
+}
+
+h1 .flex span:last-of-type { /* Styles the last span within .flex differently. */
+  font-size: 1.2em;
+}
+
+section { /* Styles the 'section' element. */
+  max-width: 40rem;
+  margin: 0 auto;
+  border: 2px solid #d0d0d5;
+}
+
+#years { /* Applies flexbox layout to the element with id 'years'. */
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  background: #0a0a23;
+  color: #fff;
+  padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+  margin: 0 -2px;
+}
+
+#years span[class] { /* Styles span elements within #years with any class. */
+  font-weight: bold;
+  width: 4.5rem;
+  text-align: right;
+}
+
+.table-wrap { /* Adds padding around elements with class 'table-wrap'. */
+  padding: 0 0.75rem 1.5rem 0.75rem;
+}
+
+table { /* Specifies that the borders of the table and its cells should be merged. */
+  border-collapse: collapse;
+  border: 0;
+  width: 100%;
+  position: relative;
+  margin-top: 3rem;
+}
+
+table caption { /* Styles the 'caption' element within tables. */
+  color: #356eaf;
+  font-size: 1.3em;
+  font-weight: normal;
+  position:absolute;
+  top: -2.25rem;
+  left: 0.5rem;
+}
+
+tbody td { /* Styles table data cells within the tbody element. */
+  width: 100vw;
+  min-width: 4rem;
+  max-width: 4rem;
+}
+
+tbody th { /* Styles table header cells within the tbody element. */
+  width: calc(100% - 12rem);
+}
+
+tr[class="total"] { /* Adds styling for rows with class 'total'. */
+  border-bottom: 4px double #0a0a23;
+  font-weight:bold;
+}
+
+tr[class="total"] th { /* Styles th elements within rows of class 'total'. */
+  text-align: left;
+  padding: 0.5rem 0 0.25rem 0.5rem;
+}
+
+tr.total td { /* Styles td elements within rows of class 'total'. */
+  text-align: right;
+  padding: 0 0.25rem;
+}
+
+tr.total td:nth-of-type(3) { /* Specific styling for the third td within rows of class 'total'. */
+  padding-right: 0.5rem;
+}
+
+tr.total:hover { /* Adds hover effect for rows with class 'total'. */
+  background-color: #99c9ff;
+}
+
+td.current { /* Styles cells with class 'current' in italic text. */
+  font-style: italic;
+}
+
+tr.data { /* Adds background styling for rows with class 'data'. */
+  background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+}
+
+tr.data th { /* Styles th elements within rows of class 'data'. */
+  text-align: left;
+  padding-top: 0.3rem;
+  padding-left: 0.5rem;
+}
+
+tr.data th .description { /* Styles descriptions within th elements of rows with class 'data'. */
+  display: block;
+  font-weight: normal;
+  font-style: italic;
+  padding: 1rem 0 0.75rem;
+  margin-right: -13.5rem;
+}
+
+tr.data td { /* Styles td elements within rows of class 'data'. */
+  vertical-align: top;
+  padding: 0.3rem 0.25rem 0;
+  text-align: right;
+}
+
+tr.data td:last-of-type{ /* Specific styling for the last td within rows of class 'data'. */
+  padding-right:0.5rem;
+}

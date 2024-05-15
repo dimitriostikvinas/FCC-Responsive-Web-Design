@@ -1,0 +1,163 @@
+* { /* Applies to all elements in the document. */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height. */
+}
+
+body { /* Styles applied to the body element. */
+  background-color: #c9d2fc; /* Sets the background color of the body. */
+}
+
+.cat-head { /* Styles applied to the cat's head. */
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: linear-gradient(#5e5e5e 85%, #45454f 100%); /* Gradient background for the cat's head. */
+  width: 205px;
+  height: 180px;
+  border: 1px solid #000;
+  border-radius: 46%; /* Rounded corners for the cat's head. */
+}
+
+.cat-left-ear, .cat-right-ear { /* Styles applied to both the left and right ears of the cat. */
+  position: absolute;
+  top: -26px; /* Positioned above the head. */
+  border-bottom: 70px solid #5e5e5e; /* Creates a triangular ear shape. */
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+}
+
+.cat-left-ear { /* Specific styles for the left ear. */
+  left: -31px; /* Positioned to the left of the head. */
+  z-index: 1;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 10px;
+  transform: rotate(-45deg); /* Rotates the ear to the left. */
+}
+
+.cat-right-ear { /* Specific styles for the right ear. */
+  left: 163px; /* Positioned to the right of the head. */
+  transform: rotate(45deg); /* Rotates the ear to the right. */
+}
+
+.cat-left-inner-ear, .cat-right-inner-ear { /* Styles for the inner parts of both ears. */
+  position: absolute;
+  top: 22px;
+  left: -20px;
+  border-bottom: 40px solid #3b3b4f; /* Darker color for the inner ear. */
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 40%;
+  border-bottom-left-radius: 40%;
+}
+
+.cat-left-eye, .cat-right-eye { /* Styles for both eyes. */
+  position:absolute;
+  top: 54px;
+  border-radius: 60%; /* Rounded shape for the eyes. */
+  width: 30px;
+  height: 40px;
+  background-color: #000; /* Black color for the eyes. */
+}
+
+.cat-left-eye { /* Specific styles for the left eye. */
+  left: 39px;
+  transform: rotate(25deg); /* Rotates the left eye slightly. */
+}
+
+.cat-right-eye { /* Specific styles for the right eye. */
+  left: 134px;
+  transform: rotate(-25deg); /* Rotates the right eye slightly. */
+}
+
+.cat-left-inner-eye, .cat-right-inner-eye { /* Styles for the inner parts of both eyes. */
+  position: absolute;
+  top: 8px;
+  width: 10px;
+  height: 20px;
+  background-color: #fff; /* White color for the inner part of the eyes. */
+  border-radius: 60%; /* Rounded shape for the inner part of the eyes. */
+}
+
+.cat-left-inner-eye { /* Specific styles for the inner part of the left eye. */
+  left: 2px;
+  transform: rotate(10deg); /* Slight rotation for the inner part of the left eye. */
+}
+
+.cat-right-inner-eye { /* Specific styles for the inner part of the right eye. */
+  left: 18px;
+  transform: rotate(-5deg); /* Slight rotation for the inner part of the right eye. */
+}
+
+.cat-nose { /* Styles for the cat's nose. */
+  position: absolute;
+  top: 108px;
+  left: 85px;
+  border-bottom: 20px solid #442c2c; /* Triangular shape for the nose using borders. */
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  transform: rotate(180deg); /* Rotates the nose to point downwards. */
+}
+
+.cat-mouth div { /* Styles for both sides of the cat's mouth. */
+  width: 30px;
+  height: 50px;
+  border: 2px solid #000;
+  border-radius: 190%/190px 150px 0 0; /* Rounded top edge for the mouth lines. */
+  border-color: black transparent transparent transparent;
+}
+
+.cat-mouth-line-left { /* Specific styles for the left side of the mouth line. */
+  position: absolute;
+  top: 88px;
+  left: 74px;
+  transform: rotate(170deg); /* Rotates the left side of the mouth line slightly. */
+}
+
+.cat-mouth-line-right { /* Specific styles for the right side of the mouth line. */
+  position: absolute;
+  top: 88px;
+  left: 91px;
+  transform: rotate(165deg); /* Rotates the right side of the mouth line slightly. */
+}
+
+.cat-whiskers-left div, .cat-whiskers-right div { /* Styles for all whiskers. */
+  width: 40px;
+  height: 1px;
+  background-color: #000; /* Black color for the whiskers. */
+}
+
+.cat-whisker-left-top, .cat-whisker-right-top { /* Top whiskers on both sides. */
+  position: absolute;
+  top: 120px;
+  transform: rotate(10deg); /* Slight rotation for the top whiskers. */
+}
+
+.cat-whisker-left-middle, .cat-whisker-right-middle { /* Middle whiskers on both sides. */
+  position:absolute;
+  top: 127px;
+  transform: rotate(3deg); /* Slight rotation for the middle whiskers. */
+}
+
+.cat-whisker-left-bottom, .cat-whisker-right-bottom { /* Bottom whiskers on both sides. */
+  position: absolute;
+  top: 134px;
+  transform: rotate(-3deg); /* Slight rotation for the bottom whiskers. */
+}
+
+.cat-whisker-right-top { /* Specific style adjustment for the top right whisker. */
+  left: 109px;
+  transform: rotate(-10deg);
+}
+
+.cat-whisker-right-middle { /* Specific style adjustment for the middle right whisker. */
+  left: 109px;
+}
+
+.cat-whisker-right-bottom { /* Specific style adjustment for the bottom right whisker. */
+  left: 109px;
+  transform: rotate(3deg);
+}
